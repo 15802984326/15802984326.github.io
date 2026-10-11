@@ -237,16 +237,6 @@ git push origin main
 ghp-import output -b main -n -m "deploy blog" -p -r git@github.com:15802984326/15802984326.github.io.git --force
 ```
 
-如果之前选了生成 `tasks.py`，也可以使用：
-
-```powershell
-python tasks.py html
-python tasks.py serve
-```
-
-但 `tasks.py github` 命令依赖于 pelican-quickstart 时配置的上传方式，在分离方案下可能不生效，建议始终用上面的 `ghp-import` 命令。
-
-
 ## 12. 写新文章的方式
 
 以后每次写新文章，只需要：
@@ -261,14 +251,7 @@ pelican content
 git add .
 git commit -m "add: new post"
 git push origin main
-ghp-import output -b main -n -m "deploy blog" -p
+ghp-import output -b main -n -m "deploy blog" -p -r git@github.com:15802984326/15802984326.github.io.git --force
 ```
 
-文章文件名建议用英文，例如：
-
-```text
-content/python-notes-01.md
-```
-
-这样可以避免部分环境下中文路径带来的问题。
-
+或者直接调用脚本protocol_push.bat
