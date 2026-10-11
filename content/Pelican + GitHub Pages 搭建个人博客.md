@@ -100,7 +100,7 @@ pelican-quickstart
 
 执行pelican-quickstart有可能会报错：
 
-关于 pelican-quickstart 被拦截的解决方法，请跳转到 [这篇排查文章](程序%20pelican-quickstart.exe%20无法运行.md)
+关于 pelican-quickstart 被拦截的解决方法，请跳转到 [这篇排查文章](pelican-quickstart-blocked-by-app-control.html)
 
 ## 6. 提交到 gm_blog Git 仓库
 
