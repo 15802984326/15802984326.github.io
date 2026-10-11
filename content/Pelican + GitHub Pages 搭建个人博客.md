@@ -98,9 +98,9 @@ pelican-quickstart
 
 不同 Pelican 版本的问题顺序可能略有差异。如果某个问题后面有 `[.]`、`[en]`、`[Y/n]` 这类提示，表示方括号里是默认值，直接回车就会采用默认值。
 
-执行pelican-quickstart有可能会报错，下面有失败案例：
+执行pelican-quickstart有可能会报错：
 
-[[程序 "pelican-quickstart.exe" 无法运行|Windows下Pelican快捷命令被拦截]] 
+关于 pelican-quickstart 被拦截的解决方法，请跳转到 [这篇排查文章](程序%20pelican-quickstart.exe%20无法运行.md)
 
 ## 6. 提交到 gm_blog Git 仓库
 
