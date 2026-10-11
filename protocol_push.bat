@@ -1,13 +1,10 @@
 @echo off
 chcp 65001 >nul
 
-echo ========================================
 echo   Pelican 博客一键部署
-echo ========================================
 echo.
 
 :: 1. 生成静态页面
-echo [1/4] 生成静态页面...
 pelican content
 if errorlevel 1 (
     echo [错误] 生成失败
@@ -17,7 +14,6 @@ if errorlevel 1 (
 echo.
 
 :: 2. 推送源码到 gm_blog
-echo [2/4] 推送源码到 gm_blog...
 git add -A
 git diff --cached --quiet
 if not errorlevel 1 (
@@ -36,6 +32,9 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+
+:: 3. 清理 ghp-import 在本地留下的提交
+git reset --hard origin/main
 
 echo.
 echo ========================================
